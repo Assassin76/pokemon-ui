@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pokemon UI
 
 A Pokémon-themed user interface recreated using HTML and CSS.
@@ -34,3 +35,6 @@ pokemon-ui/
 ## Author
 
 Swayam Bhandari
+=======
+# pokemon-ui
+>>>>>>> fe3ead1d203c74ae2323b6f1f568d68fb64249ad
