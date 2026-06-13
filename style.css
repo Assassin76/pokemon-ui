@@ -1,0 +1,399 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef0f8;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:95%;
+    min-height:95vh;
+    margin:auto;
+    background:linear-gradient(
+        135deg,
+        #f7f7fb 0%,
+        #ffffff 50%,
+        #f3f3ff 100%
+    );
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* TOP BUTTONS */
+
+.menu-btn,
+.theme-btn{
+    width:55px;
+    height:55px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:absolute;
+    top:35px;
+
+    font-size:24px;
+    color:#355;
+}
+
+.menu-btn{
+    left:35px;
+}
+
+.theme-btn{
+    right:35px;
+}
+
+/* LOGO */
+
+.logo{
+    width:240px;
+    position:absolute;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+/* SEARCH */
+
+.search-box{
+    position:absolute;
+    top:170px;
+    left:45px;
+    width:420px;
+}
+
+.search-box input{
+    width:100%;
+    padding:18px 25px 18px 50px;
+    border:none;
+    border-radius:35px;
+    background:#f7f7f7;
+    font-size:17px;
+    outline:none;
+}
+
+.search-icon{
+    position:absolute;
+    top:17px;
+    left:18px;
+    font-size:22px;
+    color:#8a8a8a;
+}
+
+/* FILTER */
+
+.filter-box{
+    width:200px;
+    height:50px;
+
+    position:absolute;
+    top:170px;
+    right:90px;
+
+    background:#f7f7f7;
+    border-radius:30px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.filter-icon{
+    width:50px;
+    height:50px;
+
+    background:#f7f7f7;
+    border-radius:50%;
+
+    position:absolute;
+    top:170px;
+    right:25px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:20px;
+}
+
+/* CARDS */
+
+.cards{
+    position:absolute;
+    top:270px;
+    left:50%;
+    transform:translateX(-50%);
+    width:92%;
+}
+
+.card{
+    width:23%;
+    height:370px;
+
+    background:white;
+    border-radius:25px;
+
+    position:relative;
+
+    display:inline-block;
+    vertical-align:top;
+
+    margin-right:1%;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+.card:last-child{
+    margin-right:0;
+}
+
+.number{
+    position:absolute;
+    top:15px;
+    left:18px;
+
+    color:#8d8d8d;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.heart{
+    position:absolute;
+    top:12px;
+    right:12px;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.heart i{
+    color:#777;
+}
+
+/* Circle behind Pokemon */
+
+.card::before{
+    content:"";
+
+    width:170px;
+    height:170px;
+
+    border-radius:50%;
+
+    background:#f4f6fb;
+
+    position:absolute;
+    top:45px;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.card img{
+    width:170px;
+
+    position:absolute;
+    top:45px;
+    left:50%;
+
+    transform:translateX(-50%);
+    z-index:2;
+}
+
+.card h2{
+    position:absolute;
+    bottom:75px;
+    left:18px;
+
+    color:#17355b;
+    font-size:22px;
+}
+
+.type{
+    position:absolute;
+    bottom:25px;
+    left:18px;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+    font-weight:bold;
+}
+
+.arrow{
+    position:absolute;
+    right:18px;
+    bottom:20px;
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+/* CARD COLORS */
+
+.grass{
+    border-bottom:4px solid #4ecb71;
+}
+
+.grass .type{
+    background:#eaf8ed;
+    color:#4ecb71;
+}
+
+.steel{
+    border-bottom:4px solid #7387a0;
+}
+
+.steel .type{
+    background:#eef2f6;
+    color:#7387a0;
+}
+
+.fire{
+    border-bottom:4px solid #ff7956;
+}
+
+.fire .type{
+    background:#fff0ea;
+    color:#ff7956;
+}
+
+.water{
+    border-bottom:4px solid #5d89ff;
+}
+
+.water .type{
+    background:#edf2ff;
+    color:#5d89ff;
+}
+
+/* FEATURES */
+
+.features{
+    position:absolute;
+    bottom:75px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+    height:105px;
+
+    background:#fafafa;
+    border-radius:20px;
+
+    display:flex;
+    align-items:center;
+}
+
+.feature{
+    flex:1;
+    text-align:center;
+    position:relative;
+}
+
+.feature:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:15px;
+
+    width:1px;
+    height:60px;
+
+    background:#e7e7e7;
+}
+
+.feature i{
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 auto 10px auto;
+
+    font-size:24px;
+}
+
+.feature h4{
+    margin-bottom:4px;
+    color:#1f3555;
+}
+
+.feature p{
+    color:#555;
+    font-size:14px;
+}
+
+/* ICON COLORS */
+
+.feature:nth-child(1) i{
+    background:#edf2ff;
+    color:#5d89ff;
+}
+
+.feature:nth-child(2) i{
+    background:#eef9f0;
+    color:#56bf67;
+}
+
+.feature:nth-child(3) i{
+    background:#fff8df;
+    color:#f0c441;
+}
+
+.feature:nth-child(4) i{
+    background:#f7ecff;
+    color:#b06cff;
+}
+
+/* FOOTER */
+
+.footer{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    text-align:center;
+
+    color:#777;
+    font-size:14px;
+}
